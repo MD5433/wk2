@@ -5,6 +5,7 @@ public class Main {
         int[] precipationProb = { 95, 60, 25, 5, 0, 75,90};
         String[] wkDays = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
+        //goes through each it in wkDays
         for (int i = 0; i < wkDays.length; i++) {
             if ( 32 >= highTemp[i] && 50 < precipationProb[i]){
                 System.out.println(wkDays[i] + " is likely to snow.");
