@@ -1,55 +1,19 @@
-import java.time.DayOfWeek;
-
+// Mariah Dungey 01/27/2025
 public class Main {
     public static void main(String[] args) {
-        int lowTemperature = 32;
-        System.out.println(true | (lowTemperature+=5)>0);
-        System.out.println(lowTemperature);
-        int currentTemperature = 3;
-        int warmThreshold = 60;
+        int[] highTemp = {45, 29, 10, 22, 41, 28, 33};
+        int[] precipationProb = { 95, 60, 25, 5, 0, 75,90};
+        String[] wkDays = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
-        if (currentTemperature>warmThreshold)
-            System.out.println("it is warm outside");
-        else
-            System.out.println("it is cold outside");
-
-        System.out.println(currentTemperature>warmThreshold ? "its warm outside":"its cold outside");
-
-        String windDirection = "west";
-
-        switch(windDirection){
-            case "north":
-                System.out.println("the wind is going north");
-                break;
-            case "south":
-                System.out.println("the wind is going south");
-                break;
-            case "west":
-                System.out.println("the wind is going west");
-                break;
-            case "east":
-                System.out.println("the wind is going east");
-                break;
-
-            default:
-                System.out.println("I do not know where the wind is going");
-        }
-        int i = 0;
-        for(; i < 10;){
-            System.out.println(i);
-            i++;
-        }
-
-        String[] daysOfWeek = {"sunday","monday","tuesday","wednesday"};
-
-        int[] temps ={1,2,3,4};
-        double[] precipitation = {4,3,2,1};
-
-        for(int k = 0; 0 < DayOfWeek.length ; k++){
-            if((temps[k]>32) && (precipitation[k]<.5)){
-                
+        for (int i = 0; i < wkDays.length; i++) {
+            if ( 32 >= highTemp[i] && 50 < precipationProb[i]){
+                System.out.println(wkDays[i] + " is likely to snow.");
+            } else {
+                System.out.println(wkDays[i] + " Isn't likly to snow.");
             }
+
         }
+
 
     }
 }
